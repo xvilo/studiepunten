@@ -1,0 +1,22 @@
+html, body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.centered {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.text-type-red    { color: red; }
+.text-type-orange { color: orange; }
+.text-type-green  { color: green; }
+.text-type-gray   { color: gray; }
+

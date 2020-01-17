@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="centered">
+        {# read and display all flash messages #}
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flash-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        {% if color == 'red' %}
+            {% set text = 'Nee, ze is er nog niet:' %}
+        {% elseif color == 'orange' %}
+            {% set text = 'Nee, maar wel bijna:' %}
+        {% elseif color == 'green' %}
+            {% set text = 'Ja, met wel:' %}
+        {% else %}
+            {% set text = 'Nee, ze heeft' %}
+        {% endif %}
+        <h1 class="text-type-{{ color }}">{{ text }} {{ number }} punten</h1>
+    </div>
+
+{% endblock %}
